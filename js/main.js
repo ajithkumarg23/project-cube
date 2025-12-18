@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Load all partials
     await loadPartial('partials/header.html', 'header-container');
-    await loadPartial('partials/hero.html', 'hero-container');
     await loadPartial('partials/product.html', 'product-container');
     await loadPartial('partials/stats.html', 'stats-container');
     await loadPartial('partials/table.html', 'table-container');

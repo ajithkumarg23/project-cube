@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.gap-12 {
+    gap: 12px;
+}
