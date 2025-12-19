@@ -8,38 +8,50 @@
         const leftArrow = gallery.querySelector('.left-arrow-button');
         const rightArrow = gallery.querySelector('.right-arrow-button');
         const dotsContainer = gallery.querySelector('.center-dot-button');
-        const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('img')) : [];
+        const initialDots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('img')) : [];
         const thumbnails = gallery.querySelectorAll('.product-thumbnails .preview-img');
 
         // Ensure required elements are present
-        if (!mainImage || !leftArrow || !rightArrow || dots.length === 0) return;
+        if (!mainImage || !leftArrow || !rightArrow || initialDots.length === 0) return;
 
         // Mark as initialized
         gallery.dataset.galleryInitialized = 'true';
 
         // Store the source URLs for active (filled) and inactive (empty) dots
         // Assuming the first dot is the active one initially
-        const activeDotSrc = dots[0].src;
-        const inactiveDotSrc = dots[1].src;
+        const activeDotSrc = initialDots[0].src;
+        const inactiveDotSrc = initialDots[1] ? initialDots[1].src : initialDots[0].src;
 
         // Collect image sources from thumbnails to use for the gallery
         const images = Array.from(thumbnails).map(img => img.src);
         // Fallback if no thumbnails are present
         if (images.length === 0) images.push(mainImage.src);
 
+        // Regenerate dots to match thumbnails count
+        dotsContainer.innerHTML = '';
+        const dots = [];
+        thumbnails.forEach((_, index) => {
+            const dot = document.createElement('img');
+            dot.src = (index === 0) ? activeDotSrc : inactiveDotSrc;
+            dot.style.cursor = 'pointer';
+            dot.addEventListener('click', () => updateGallery(index));
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        });
+
         let currentIndex = 0;
 
         function updateGallery(index) {
             // Handle circular navigation
-            if (index < 0) index = dots.length - 1;
-            if (index >= dots.length) index = 0;
+            if (index < 0) index = images.length - 1;
+            if (index >= images.length) index = 0;
 
             currentIndex = index;
 
             // Update Main Image
             // Use modulo to map the current index to the available images
             if (images.length > 0) {
-                mainImage.src = images[currentIndex % images.length];
+                mainImage.src = images[currentIndex];
             }
 
             // Update Dots
@@ -60,13 +72,7 @@
         // Event Listeners for Thumbnails
         thumbnails.forEach((thumb, index) => {
             thumb.addEventListener('click', function() {
-                // Map the thumbnail index to the dot index (0-3)
-                const dotIndex = index % dots.length;
-                updateGallery(dotIndex);
-                
-                // Explicitly set the image to the clicked thumbnail
-                // (In case the modulo logic above maps to a different duplicate image)
-                mainImage.src = thumb.src;
+                updateGallery(index);
             });
         });
     }
