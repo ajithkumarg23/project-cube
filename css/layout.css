@@ -1,8 +1,8 @@
-/* Header Styles */
+/* Header Styles Starts */
 .banner {
     background-image: url("../assets/images/hero_banner.png");
     width: 100%;
-    height: 794px;
+    height: 49.625rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,84 +14,86 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 12px 64px;
+    padding: 0.75rem 4rem;
     box-sizing: border-box;
     z-index: 1000;
 }
 
-.brand_name {
+.brand-name {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 150%;
 }
-
 .navbar {
-    gap: 32px;
+    gap: 2rem;
 }
-
 .nav-link {
     font-family: var(--font-family-base);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--color-nav-items);
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-.downarrow-icon {
-    width: 13px;
-    height: 8px;
+.dropdown-icon {
+    width: 0.8125rem;
+    height: 0.5rem;
 }
 
 .search-icon {
-    width: 26px;
-    height: 26px;
+    width: 1.625rem;
+    height: 1.625rem;
     cursor: pointer;
 }
 
 .banner-content {
     position: absolute;
-    top: 178px;
-    left: 64px;
+    top: 11.125rem;
+    left: 4rem;
 }
 
+/* Header Styles Ends */
+
+/* Banner Styles Starts */
+
 .medal-icon {
-    width: 17px;
-    height: 23px;
-    margin-right: 12px;
+    width: 1.0625rem;
+    height: 1.4375rem;
+    margin-right: 0.75rem;
 }
 
 .banner-title {
     font-weight: 700;
-    font-size: 56px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 3.5rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
     line-height: 100%;
 }
 
 .keywords {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .banner-content .keywords {
-    .text {
+    .stat-item {
         display: flex;
         flex-direction: column;
-        margin-right: 80px;
+        margin-right: 5rem;
         font-weight: 300;
-        font-size: 22px;
+        font-size: 1.375rem;
         line-height: 100%;
 
         span {
             font-weight: 700;
-            font-size: 72px;
+            font-size: 4.5rem;
             background: var(--gradient-text);
             -webkit-background-clip: text;
             background-clip: text;
@@ -101,3 +103,4 @@
     }
 }
 
+/* Banner Styles Ends */
