@@ -32,6 +32,7 @@
             </div>
         </div>
     </div>
+
     <div class="product-details">
         <h2 class="product-title">GTG Perfumes</h2>
         <div class="rating-section">
@@ -51,11 +52,12 @@
             </p>
         </div>
 
+        <!-- Implement Accordian here -->
         <div class="product-purchase">
             <div class="most-popular">
                 <h3 class="purchase-title">Most Popular</h3>
 
-                <div class="single-subscription-selected">
+                <div id="single-subscription-container" class="single-subscription-selected">
                     <div class="card">
                         <input type="radio" class="radio-input" id="single" name="subscription"
                             value="singleSubscription" checked>
@@ -144,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="double-subscription-selected">
+            <div id="double-subscription-container" class="double-subscription-not-selected">
                 <div class="card">
                     <input type="radio" class="radio-input" id="double" name="subscription" value="doubleSubscription">
                     <div class="card-title">
@@ -196,7 +198,7 @@
                         <div class="fragrance-container">
                             <div class="original best-seller-img">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="original" name="fragrance" value="original" checked>
+                                    <input type="radio" id="original" name="fragrance2" value="original" checked>
                                     <label for="original" class="label">Original</label>
                                 </div>
                                 <div class="product-img">
@@ -206,7 +208,7 @@
                             </div>
                             <div class="lily">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="lily" name="fragrance" value="lily">
+                                    <input type="radio" id="lily" name="fragrance2" value="lily">
                                     <label for="lily" class="label">Lily</label>
                                 </div>
                                 <div class="product-img">
@@ -215,7 +217,7 @@
                             </div>
                             <div class="rose">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="rose" name="fragrance" value="rose">
+                                    <input type="radio" id="rose" name="fragrance2" value="rose">
                                     <label for="rose" class="label">Rose</label>
                                 </div>
                                 <div class="product-img">
