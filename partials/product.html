@@ -56,28 +56,214 @@
                 <h3 class="purchase-title">Most Popular</h3>
 
                 <div class="single-subscription-selected">
-                    <input type="radio" class="radio-input" id="single" name="single-subscription" checked>
-                    <div class="card-title">
-                        <label for="single" class="radio-label">Single Subscription</label>
-                        <div>
-                            <span class="discount-price">$99.99</span>
-                            <span class="original-price">$146</span>
+                    <div class="card">
+                        <input type="radio" class="radio-input" id="single" name="subscription"
+                            value="singleSubscription" checked>
+                        <div class="card-title">
+                            <label for="single" class="radio-label">Single Subscription</label>
+                            <div>
+                                <span class="discount-price">$99.99</span>
+                                <span class="original-price">$146</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="fragrance">
+                            <h5 class="fragrance-title">Choose a Fragrance</h5>
+                            <div class="fragrance-container">
+                                <div class="original best-seller-img">
+                                    <div class="flex gap-6">
+                                        <input type="radio" id="original" name="fragrance" value="original" checked>
+                                        <label for="original" class="label">Original</label>
+                                    </div>
+                                    <div class="product-img">
+                                        <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                    </div>
+                                    <div class="best-seller">BEST-SELLER</div>
+                                </div>
+                                <div class="lily">
+                                    <div class="flex gap-6">
+                                        <input type="radio" id="lily" name="fragrance" value="lily">
+                                        <label for="lily" class="label">Lily</label>
+                                    </div>
+                                    <div class="product-img">
+                                        <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                    </div>
+                                </div>
+                                <div class="rose">
+                                    <div class="flex gap-6">
+                                        <input type="radio" id="rose" name="fragrance" value="rose">
+                                        <label for="rose" class="label">Rose</label>
+                                    </div>
+                                    <div class="product-img">
+                                        <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="included">
+                            <h5 class="included-title">What's Included:</h5>
+                            <div class="included-item-container">
+                                <div class="included-item-monthly">
+                                    <label class="label">Every 30 Days</label>
+                                    <div class="product-img-lg">
+                                        <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                    </div>
+                                </div>
+                                <div class="included-item-onetime">
+                                    <label class="label">One Time <span>(Free)</span></label>
+                                    <div class="product-img">
+                                        <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                        <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                        <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <ul class="details-list">
+                                <li class="detail-item">
+                                    <img src="../assets/images/icons/seal_check.svg" alt="check" class="checkmark-icon">
+                                    1 Bottle Shipped Monthly
+                                </li>
+                                <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                        class="checkmark-icon"><span>Free</span> Sampler For Original, Lily And Rose
+                                    Fragrances</li>
+                                <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                        class="checkmark-icon"><span>50% OFF Shipping</span></li>
+                                <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                        class="checkmark-icon">Pause or Cancel Anytime after 3 months minimum</li>
+                                <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                        class="checkmark-icon">28 Day Money Back Guarantee*</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="double-subscription-not-selected">
-                <input type="radio" class="radio-input" id="double" name="double-subscription">
-                <div class="card-title">
-                    <label for="double" class="radio-label">Double Subscription</label>
-                    <div>
-                        <span class="discount-price">$169.99</span>
-                        <span class="original-price">$146</span>
+            <div class="double-subscription-selected">
+                <div class="card">
+                    <input type="radio" class="radio-input" id="double" name="subscription" value="doubleSubscription">
+                    <div class="card-title">
+                        <label for="double" class="radio-label">Double Subscription</label>
+                        <div>
+                            <span class="discount-price">$169.99</span>
+                            <span class="original-price">$146</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="fragrance">
+                        <h5 class="fragrance-title">Choose a Fragrance 1</h5>
+                        <div class="fragrance-container">
+                            <div class="original best-seller-img">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="original" name="fragrance" value="original" checked>
+                                    <label for="original" class="label">Original</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                </div>
+                                <div class="best-seller">BEST-SELLER</div>
+                            </div>
+                            <div class="lily">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="lily" name="fragrance" value="lily">
+                                    <label for="lily" class="label">Lily</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                </div>
+                            </div>
+                            <div class="rose">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="rose" name="fragrance" value="rose">
+                                    <label for="rose" class="label">Rose</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fragrance fragrance-2">
+                        <h5 class="fragrance-title">Choose a Fragrance 2</h5>
+                        <div class="fragrance-container">
+                            <div class="original best-seller-img">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="original" name="fragrance" value="original" checked>
+                                    <label for="original" class="label">Original</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                </div>
+                                <div class="best-seller">BEST-SELLER</div>
+                            </div>
+                            <div class="lily">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="lily" name="fragrance" value="lily">
+                                    <label for="lily" class="label">Lily</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                </div>
+                            </div>
+                            <div class="rose">
+                                <div class="flex gap-6">
+                                    <input type="radio" id="rose" name="fragrance" value="rose">
+                                    <label for="rose" class="label">Rose</label>
+                                </div>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="included">
+                        <h5 class="included-title">What's Included:</h5>
+                        <div class="included-item-container">
+                            <div class="included-item-monthly">
+                                <label class="label">Every 30 Days</label>
+                                <div class="product-img-lg">
+                                    <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                </div>
+                            </div>
+                            <div class="included-item-onetime">
+                                <label class="label">One Time <span>(Free)</span></label>
+                                <div class="product-img">
+                                    <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                    <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                    <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <ul class="details-list">
+                            <li class="detail-item">
+                                <img src="../assets/images/icons/seal_check.svg" alt="check" class="checkmark-icon">
+                                1 Bottle Shipped Monthly
+                            </li>
+                            <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                    class="checkmark-icon"><span>Free</span> Sampler For Original, Lily And Rose
+                                Fragrances</li>
+                            <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                    class="checkmark-icon"><span>50% OFF Shipping</span></li>
+                            <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                    class="checkmark-icon">Pause or Cancel Anytime after 3 months minimum</li>
+                            <li class="detail-item"><img src="../assets/images/icons/seal_check.svg" alt="check"
+                                    class="checkmark-icon">28 Day Money Back Guarantee*</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
