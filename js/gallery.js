@@ -7,7 +7,7 @@
         const mainImage = gallery.querySelector('.product-preview .product-img');
         const leftArrow = gallery.querySelector('.left-arrow-button');
         const rightArrow = gallery.querySelector('.right-arrow-button');
-        const dotsContainer = gallery.querySelector('.center-dot-button');
+        const dotsContainer = gallery.querySelector('.slider-pagination');
         const initialDots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('img')) : [];
         const thumbnails = gallery.querySelectorAll('.product-thumbnails .preview-img');
 

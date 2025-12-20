@@ -3,16 +3,16 @@
         <div class="product-preview">
             <img src="../assets/images/preview_original.png" alt="Product Image" class="product-img">
             <div class="product-nav">
-                <button class="icon-button left-arrow-button">
+                <button class="icon-button left-arrow-button" aria-label="Previous Image">
                     <img src="../assets/images/icons/slider_arrow_left.svg" alt="Left Arrow">
                 </button>
-                <div class="flex center-dot-button">
+                <div class="flex slider-pagination">
                     <img src="../assets/images/icons/slider_dot_filled.svg" alt="Active Dot">
                     <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
                     <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
                     <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
                 </div>
-                <button class="icon-button right-arrow-button">
+                <button class="icon-button right-arrow-button" aria-label="Next Image">
                     <img src="../assets/images/icons/slider_arrow_right.svg" alt="Right Arrow">
                 </button>
             </div>
@@ -56,11 +56,11 @@
             <div class="most-popular">
                 <h3 class="purchase-title">Most Popular</h3>
 
-                <div id="single-subscription-container" class="single-subscription-selected">
-                    <div class="card">
+                <div id="subscription-single" class="subscription-option is-selected">
+                    <div class="subscription-header">
                         <input type="radio" class="radio-input" id="single" name="subscription"
                             value="singleSubscription" checked>
-                        <div class="card-title">
+                        <div class="header-content">
                             <label for="single" class="radio-label">Single Subscription</label>
                             <div>
                                 <span class="discount-price">$99.99</span>
@@ -69,14 +69,14 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
+                    <div class="subscription-body">
                         <div class="fragrance">
                             <h5 class="fragrance-title">Choose a Fragrance</h5>
                             <div class="fragrance-container">
                                 <div class="original best-seller-img">
                                     <div class="flex gap-6">
-                                        <input type="radio" id="original" name="fragrance" value="original" checked>
-                                        <label for="original" class="label">Original</label>
+                                        <input type="radio" id="frag-single-original" name="fragrance_single" value="original" checked>
+                                        <label for="frag-single-original" class="label">Original</label>
                                     </div>
                                     <div class="product-img">
                                         <img src="../assets/images/product_original.png" alt="Original Fragrance">
@@ -85,8 +85,8 @@
                                 </div>
                                 <div class="lily">
                                     <div class="flex gap-6">
-                                        <input type="radio" id="lily" name="fragrance" value="lily">
-                                        <label for="lily" class="label">Lily</label>
+                                        <input type="radio" id="frag-single-lily" name="fragrance_single" value="lily">
+                                        <label for="frag-single-lily" class="label">Lily</label>
                                     </div>
                                     <div class="product-img">
                                         <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
@@ -94,8 +94,8 @@
                                 </div>
                                 <div class="rose">
                                     <div class="flex gap-6">
-                                        <input type="radio" id="rose" name="fragrance" value="rose">
-                                        <label for="rose" class="label">Rose</label>
+                                        <input type="radio" id="frag-single-rose" name="fragrance_single" value="rose">
+                                        <label for="frag-single-rose" class="label">Rose</label>
                                     </div>
                                     <div class="product-img">
                                         <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
@@ -145,10 +145,10 @@
                 </div>
             </div>
 
-            <div id="double-subscription-container" class="double-subscription-not-selected">
-                <div class="card">
+            <div id="subscription-double" class="subscription-option">
+                <div class="subscription-header">
                     <input type="radio" class="radio-input" id="double" name="subscription" value="doubleSubscription">
-                    <div class="card-title">
+                    <div class="header-content">
                         <label for="double" class="radio-label">Double Subscription</label>
                         <div>
                             <span class="discount-price">$169.99</span>
@@ -157,14 +157,14 @@
                     </div>
                 </div>
 
-                <div class="card-body">
+                <div class="subscription-body">
                     <div class="fragrance">
                         <h5 class="fragrance-title">Choose a Fragrance 1</h5>
                         <div class="fragrance-container">
                             <div class="original best-seller-img">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="original" name="fragrance" value="original" checked>
-                                    <label for="original" class="label">Original</label>
+                                    <input type="radio" id="frag-double-1-original" name="fragrance_double_1" value="original" checked>
+                                    <label for="frag-double-1-original" class="label">Original</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_original.png" alt="Original Fragrance">
@@ -173,8 +173,8 @@
                             </div>
                             <div class="lily">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="lily" name="fragrance" value="lily">
-                                    <label for="lily" class="label">Lily</label>
+                                    <input type="radio" id="frag-double-1-lily" name="fragrance_double_1" value="lily">
+                                    <label for="frag-double-1-lily" class="label">Lily</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
@@ -182,8 +182,8 @@
                             </div>
                             <div class="rose">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="rose" name="fragrance" value="rose">
-                                    <label for="rose" class="label">Rose</label>
+                                    <input type="radio" id="frag-double-1-rose" name="fragrance_double_1" value="rose">
+                                    <label for="frag-double-1-rose" class="label">Rose</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
@@ -197,8 +197,8 @@
                         <div class="fragrance-container">
                             <div class="original best-seller-img">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="original" name="fragrance2" value="original" checked>
-                                    <label for="original" class="label">Original</label>
+                                    <input type="radio" id="frag-double-2-original" name="fragrance_double_2" value="original" checked>
+                                    <label for="frag-double-2-original" class="label">Original</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_original.png" alt="Original Fragrance">
@@ -207,8 +207,8 @@
                             </div>
                             <div class="lily">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="lily" name="fragrance2" value="lily">
-                                    <label for="lily" class="label">Lily</label>
+                                    <input type="radio" id="frag-double-2-lily" name="fragrance_double_2" value="lily">
+                                    <label for="frag-double-2-lily" class="label">Lily</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
@@ -216,8 +216,8 @@
                             </div>
                             <div class="rose">
                                 <div class="flex gap-6">
-                                    <input type="radio" id="rose" name="fragrance2" value="rose">
-                                    <label for="rose" class="label">Rose</label>
+                                    <input type="radio" id="frag-double-2-rose" name="fragrance_double_2" value="rose">
+                                    <label for="frag-double-2-rose" class="label">Rose</label>
                                 </div>
                                 <div class="product-img">
                                     <img src="../assets/images/product_rose.png" alt="Rose Fragrance">

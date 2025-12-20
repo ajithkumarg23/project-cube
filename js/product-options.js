@@ -2,22 +2,18 @@
     function updateSubscriptionClasses() {
         const singleRadio = document.getElementById('single');
         const doubleRadio = document.getElementById('double');
-        const singleContainer = document.getElementById('single-subscription-container');
-        const doubleContainer = document.getElementById('double-subscription-container');
+        const singleContainer = document.getElementById('subscription-single');
+        const doubleContainer = document.getElementById('subscription-double');
 
         // If elements aren't in the DOM yet, stop.
         if (!singleRadio || !doubleRadio || !singleContainer || !doubleContainer) return;
 
         if (singleRadio.checked) {
-            singleContainer.classList.add('single-subscription-selected');
-            singleContainer.classList.remove('single-subscription-not-selected');
-            doubleContainer.classList.add('double-subscription-not-selected');
-            doubleContainer.classList.remove('double-subscription-selected');
+            singleContainer.classList.add('is-selected');
+            doubleContainer.classList.remove('is-selected');
         } else if (doubleRadio.checked) {
-            singleContainer.classList.add('single-subscription-not-selected');
-            singleContainer.classList.remove('single-subscription-selected');
-            doubleContainer.classList.add('double-subscription-selected');
-            doubleContainer.classList.remove('double-subscription-not-selected');
+            singleContainer.classList.remove('is-selected');
+            doubleContainer.classList.add('is-selected');
         }
     }
 

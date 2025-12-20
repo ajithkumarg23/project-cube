@@ -39,6 +39,12 @@
     height: 40px;
 }
 
+.btn-accent {
+    border-radius: 0;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
 .btn-sm {
     height: 40px;
     font-size: 16px;
