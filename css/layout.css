@@ -296,14 +296,15 @@
 
         /* Body Section */
         .subscription-body {
-            padding: 0.25rem 1.375rem 1.625rem 1.375rem;
-            display: none;
-            /* Hidden by default */
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s ease, padding 0.4s ease;
+            box-sizing: border-box;
         }
 
         .subscription-option.is-selected .subscription-body {
-            display: block;
-            /* Show when selected */
+            padding: 0.25rem 1.375rem 1.625rem 1.375rem;
         }
 
         .fragrance,
@@ -513,6 +514,8 @@
     border-radius: 8px;
     border: 1px solid var(--accordion-border);
     width: 626px;
+    overflow: hidden;
+    transition: height 0.4s ease;
 }
 
 .accordion-header {
@@ -531,31 +534,18 @@
     position: relative;
     width: 24px;
     height: 24px;
+    background-image: url("../assets/images/icons/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .accordion-icon::before,
 .accordion-icon::after {
-    content: "";
-    position: absolute;
-    transition: transform 0.3s ease;
+    display: none;
 }
 
-.accordion-icon::before {
-    width: 24px;
-    height: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.accordion-icon::after {
-    width: 24px;
-    height: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.accordion-item[open] .accordion-icon::after {
-    transform: translateX(-50%) scaleY(0);
+.accordion-item[open] .accordion-icon {
+    background-image: url("../assets/images/icons/minus.svg");
 }
 
 .accordion-body {
