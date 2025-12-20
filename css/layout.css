@@ -61,7 +61,7 @@
     background: #fff;
 }
 
-.comparison-brand--gtg {
+.comparison-brand-gtg {
     background: #eaf6ee;
     border-radius: 12px 12px 0 0;
     position: relative;
@@ -100,7 +100,7 @@
     background: #fff;
 }
 
-.comparison-cell--gtg {
+.comparison-cell-gtg {
     background: #eaf6ee;
     font-weight: 600;
     color: #1a3c24;
@@ -124,8 +124,8 @@
 }
 
 /* Highlight GTG column */
-.comparison-table td.comparison-cell--gtg,
-.comparison-table th.comparison-brand--gtg {
+.comparison-table td.comparison-cell-gtg,
+.comparison-table th.comparison-brand-gtg {
     background: #eaf6ee;
 }
 
