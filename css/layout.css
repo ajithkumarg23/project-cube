@@ -1,4 +1,160 @@
-/* Header Styles Starts */
+
+/* Comparison Table Section */
+.comparison {
+    max-width: 900px;
+    margin: 0 auto 64px auto;
+    padding: 0 16px 48px 16px;
+    background: #fff;
+}
+
+.comparison-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.comparison-divider {
+    width: 40px;
+    border: none;
+    border-top: 2px solid #1a3c24;
+    margin: 32px auto 16px auto;
+    background: none;
+}
+
+.comparison-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a3c24;
+    margin: 0;
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    text-align: center;
+    padding: 16px 8px;
+    border-bottom: 1px solid #e3e3e3;
+    vertical-align: middle;
+}
+
+.comparison-qualities-header {
+    text-align: left;
+    font-weight: 600;
+    color: #222;
+    background: #fff;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.comparison-brand {
+    font-weight: 500;
+    color: #222;
+    background: #fff;
+}
+
+.comparison-brand--gtg {
+    background: #eaf6ee;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+
+.comparison-brand-img {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-brand-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.comparison-brand-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.comparison-quality {
+    text-align: left;
+    font-weight: 500;
+    color: #222;
+    background: #fff;
+}
+
+.comparison-cell--gtg {
+    background: #eaf6ee;
+    font-weight: 600;
+    color: #1a3c24;
+}
+
+/* Icon styles (check/cross) */
+.comparison-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+.comparison-icon--check {
+    background-image: url('../assets/icons/check.svg');
+}
+.comparison-icon--cross {
+    background-image: url('../assets/icons/cross.svg');
+}
+
+/* Highlight GTG column */
+.comparison-table td.comparison-cell--gtg,
+.comparison-table th.comparison-brand--gtg {
+    background: #eaf6ee;
+}
+
+.comparison-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.comparison-cta {
+    background: #1a3c24;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(26,60,36,0.08);
+}
+.comparison-cta:hover,
+.comparison-cta:focus {
+    background: #174c2a;
+    outline: none;
+}
+/* =========================
+   HEADER SECTION
+========================= */
 
 .banner {
     background-image: url("../assets/images/hero_banner.png");
@@ -64,7 +220,9 @@
 
 /* Header Styles Ends */
 
-/* Banner Styles Starts */
+/* =========================
+   BANNER SECTION
+========================= */
 
 .medal-icon {
     width: 1.0625rem;
@@ -75,16 +233,16 @@
 .banner-title {
     font-weight: 700;
     font-size: 3.5rem;
-    margin-top: 1.875rem;
-    margin-bottom: 1.875rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .keywords {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.875rem;
 }
 
 .banner-content .keywords {
-    .stat-item {
+    .header-stat-item {
         display: flex;
         flex-direction: column;
         margin-right: 5rem;
@@ -104,7 +262,9 @@
 
 /* Banner Styles Ends */
 
-/* Product Styles Starts */
+/* =========================
+   PRODUCT SECTION
+========================= */
 
 .product-container {
     margin-top: 9.125rem;
@@ -547,7 +707,7 @@
 /* Collection Styles Ends */
 
 /* =========================
-   Stats SECTION
+   STATS SECTION
 ========================= */
 
 .stats-container {
@@ -583,7 +743,9 @@
 
 /* Stats Styles Ends */
 
-/* Footer Styles Starts */
+/* =========================
+   FOOTER SECTION
+========================= */
 
 .site-footer {
     background-color: var(--color-primary);
