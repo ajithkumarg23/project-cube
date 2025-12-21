@@ -2,6 +2,8 @@
 
 A production-grade, high-performance landing page for GTG Perfumes featuring custom variable fonts, responsive layouts, and interactive elements built with HTML, CSS, and JavaScript.
 
+**Live Demo:** [https://ajithkumarg23.github.io/project-cube/](https://ajithkumarg23.github.io/project-cube/)
+
 ---
 
 ## 📋 Table of Contents
