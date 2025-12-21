@@ -1,3 +1,9 @@
+:root {
+    --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-micro: 150ms;
+    --duration-section: 400ms;
+}
+
 /* Keyframes for Fade In Up */
 @keyframes fadeInUp {
     from {
@@ -16,7 +22,35 @@
     opacity: 0;
 }
 
-/* Animation Class applied by JS */
+/* Utility Animations */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation Class applied by JS for Stats */
 .stat-item.fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

@@ -18,26 +18,49 @@
     cursor: pointer;
     font-weight: 500;
     font-size: 1rem;
-    transition: all 0.3s ease;
     font-family: var(--font-family-primary);
     text-align: center;
+    transition: background-position 0.5s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+    background-size: 200% auto;
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 .btn-primary {
-    background: var(--gradient-button-primary);
+    background-image: linear-gradient(to right, #032E15 0%, #016630 50%, #032E15 100%);
     color: var(--color-white);
 }
 
+.btn-primary:hover {
+    background-position: 100% 0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(1, 102, 48, 0.2);
+}
+
 .btn-secondary {
-    background: var(--gradient-button-secondary);
+    background-image: linear-gradient(to right, rgba(3, 46, 21, 0.8) 0%, rgba(1, 102, 48, 0.8) 50%, rgba(3, 46, 21, 0.8) 100%);
     color: var(--color-white);
     height: 2.5rem;
+}
+
+.btn-secondary:hover {
+    background-position: 100% 0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(1, 102, 48, 0.15);
 }
 
 .btn-accent {
     border-radius: 0;
     background-color: var(--color-accent);
     color: var(--color-white);
+    transition: transform 0.2s var(--ease-out), filter 0.2s var(--ease-out);
+}
+
+.btn-accent:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
 }
 
 .btn-sm {
@@ -63,6 +86,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.icon-button:active {
+    transform: scale(0.95);
 }
 
 /* Radio Button Styles */
@@ -72,10 +105,16 @@
         accent-color: var(--color-secondary);
         width: var(--radio-primay-size);
         height: var(--radio-primay-size);
+        transition: transform 0.2s var(--ease-out);
+    }
+
+    input[type="radio"]:checked {
+        transform: scale(1.1);
     }
 
     input+label {
         cursor: pointer;
+        transition: color 0.2s var(--ease-out);
     }
 }
 
@@ -86,9 +125,16 @@
         height: var(--radio-secondary-size);
         opacity: 0.5;
         cursor: pointer;
+        transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+
+    input[type="radio"]:checked {
+        opacity: 1;
+        transform: scale(1.1);
     }
 
     input+label {
         cursor: pointer;
+        transition: color 0.2s var(--ease-out);
     }
 }
