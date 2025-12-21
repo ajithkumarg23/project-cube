@@ -329,12 +329,29 @@
     }
 
     .footer-container {
+        /* flex-direction: column;  Already column in layout.css, but good to keep if needed */
+        gap: 2rem;
+    }
+
+    /* Stack the content columns */
+    .site-footer .footer-content {
         flex-direction: column;
         gap: 3rem;
+        align-items: center;
+    }
+
+    /* Reset the 50% width from layout.css */
+    .site-footer .footer-content>div {
+        max-width: 100%;
+        width: 100%;
     }
 
     .footer-left {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center brand and links */
     }
 
     .footer-right {
@@ -357,13 +374,20 @@
 
     .newsletter-form {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        /* Keep in row as requested */
+        gap: 0.5rem;
     }
 
-    .newsletter-form input,
+    .newsletter-form input {
+        width: auto;
+        flex: 1;
+        /* Input takes remaining space */
+    }
+
     .newsletter-form .btn {
-        width: 100%;
+        width: auto;
+        /* Button fits content */
     }
 }
 
