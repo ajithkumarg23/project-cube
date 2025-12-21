@@ -1,14 +1,6 @@
 :root {
     /* Button Border Radius */
     --border-radius: 500px;
-
-    /* Radio Button */
-    --radio-size: 1.25rem;
-    --radio-border-width: 0.063rem;
-    --radio-dot-size: 0.75rem;
-    --radio-grad-start: rgba(3, 46, 21, 0.6);
-    --radio-grad-end: rgba(1, 102, 48, 0.6);
-    --radio-bg: #ffffff;
 }
 
 /* Buttons Style */
