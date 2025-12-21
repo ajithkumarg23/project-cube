@@ -504,6 +504,10 @@
     }
 }
 
+.checkout-actions {
+    margin-top: 2rem;
+}
+
 /* Product Styles Ends */
 
 /* =========================
@@ -843,31 +847,31 @@ td.comparison-align-left {
 
     .newsletter-title {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1rem;
         color: var(--color-white);
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
 
     .newsletter-form {
         display: flex;
-        gap: 16px;
-        margin-bottom: 16px;
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
     .newsletter-form input {
         flex: 1;
-        padding: 14px 16px;
+        padding: 0.875rem 1rem;
         background: transparent;
-        border: 1px solid var(--color-white);
+        border: 0.0625rem solid var(--color-white);
         color: var(--color-white);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 300;
-        height: 50px;
+        height: 3.125rem;
     }
 
     .newsletter-note {
         font-weight: 300;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-family: var(--font-family-secondary);
         line-height: 150%;
     }

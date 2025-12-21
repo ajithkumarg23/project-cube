@@ -24,13 +24,7 @@
                 url += `?product_id=${frag1}&product_id_2=${frag2}`;
             }
 
-            // 3. Output for Verification (Simulating Navigation)
-            console.log(`Navigating to: ${url}`);
-
-            // In a real app, we would do:
-            // window.location.href = url;
-
-            // For audit showcase, verify via Alert or Console
+            // Simulate navigation (In production, use: window.location.href = url)
             alert(`Redirecting to: ${url}`);
         });
     }

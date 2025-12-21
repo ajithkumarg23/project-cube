@@ -23,7 +23,6 @@ async function loadPartial(url, targetId) {
         const html = await response.text();
         document.getElementById(targetId).innerHTML = html;
     } catch (error) {
-        console.error(error);
         document.getElementById(targetId).innerHTML = `<div style="color:red; padding: 20px;">Error loading ${url}</div>`;
     }
 }
