@@ -294,6 +294,33 @@
     }
 
     /* Redundant styles removed */
+
+    /* Table Section Adjustments for Tablet */
+    #table-container {
+        padding: 0 2rem;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    .comparison-title {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    .comparison-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        /* Ensure scroll container */
+    }
+
+    .comparison-table {
+        min-width: 600px;
+        /* Force scroll on smaller screens */
+    }
+
+    .comparison-cell {
+        padding: 0.5rem;
+    }
 }
 
 /* =========================
@@ -461,5 +488,19 @@
 
     .stat-item {
         width: 45%;
+    }
+
+    /* Table Section Mobile */
+    #table-container {
+        padding: 0 1.5rem;
+    }
+
+    .comparison-title {
+        font-size: 1.5rem;
+    }
+
+    .comparison-brand-img img {
+        width: 4rem;
+        height: 4rem;
     }
 }
