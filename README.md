@@ -57,9 +57,6 @@ project-cube/
 │   │   ├── Inter-VariableFont.ttf
 │   │   └── Oxanium-VariableFont.ttf
 │   └── images/
-│       ├── hero_banner.png
-│       ├── preview_*.png      # Product images
-│       ├── product_*.png      # Fragrance bottles
 │       └── icons/             # SVG icons
 │
 ├── css/
@@ -267,3 +264,6 @@ Tested and verified on:
 - **Team collaboration**: Multiple developers can work on different files
 
 ---
+
+Developer: Ajith Kumar
+Email: ajithkumarg23@gmail.com
