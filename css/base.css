@@ -19,8 +19,14 @@
     --color-black: #000000;
     --color-nav-items: #162456;
     --divider-color: #919798;
+    
     --accordion-border: #CDCDCD;
     --accordion-body: #666666;
+
+    --table-bg: #F0FDF4;
+    --table-border: #666666;
+    --table-secondary-text: #666666;
+
 
     /* Gradient colors */
     --gradient-button-primary: linear-gradient(180deg, #032E15 0%, #016630 100%);
