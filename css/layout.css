@@ -721,10 +721,6 @@ td.comparison-align-left {
     border-radius: 0.9375rem 0.9375rem 0 0;
 }
 
-.comparison-highlight-bottom {
-    /* border-radius: 0 0 0.9375rem 0.9375rem; */
-}
-
 .comparison-cta {
     display: flex;
     justify-content: center;
