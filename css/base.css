@@ -7,6 +7,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Oxanium';
+    src: url('../assets/fonts/Oxanium-VariableFont.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --color-primary: #032E15;
     --color-secondary: #0D542B;
@@ -35,7 +43,8 @@
     --gradient-card-header: linear-gradient(270deg, #032E15 0%, #008236 51.92%, #00C950 100%);
     --gradient-bg: linear-gradient(180deg, #032E15 0%, #016630 100%);
 
-    --font-family-base: 'Inter', Arial, sans-serif;
+    --font-family-primary: 'Inter', Arial, sans-serif;
+    --font-family-secondary: 'Oxanium', Arial, sans-serif;
     --font-size-base: 16px;
     --line-height-base: normal;
 }
@@ -54,7 +63,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-primary);
     color: var(--color-primary);
     background-color: var(--color-white);
     -webkit-font-smoothing: antialiased;
@@ -76,7 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-primary);
     color: var(--color-primary);
 }
 

@@ -36,7 +36,7 @@
 }
 
 .nav-link {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-primary);
     font-size: 1rem;
     font-weight: 400;
     color: var(--color-nav-items);
@@ -785,6 +785,7 @@ td.comparison-align-left {
         text-decoration: none;
         font-weight: 300;
         font-size: 14px;
+        font-family: var(--font-family-secondary);
     }
 
     /* Social */
@@ -827,6 +828,8 @@ td.comparison-align-left {
     .newsletter-note {
         font-weight: 300;
         font-size: 12px;
+        font-family: var(--font-family-secondary);
+        line-height: 150%;
     }
 
     .newsletter-note a {
