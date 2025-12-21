@@ -9,13 +9,13 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 0.625rem;
     z-index: 2000;
 }
 
 .hamburger-box {
-    width: 30px;
-    height: 24px;
+    width: 1.875rem;
+    height: 1.5rem;
     display: inline-block;
     position: relative;
 }
@@ -23,7 +23,7 @@
 .hamburger-inner {
     display: block;
     top: 50%;
-    margin-top: -1.5px;
+    margin-top: -0.09375rem;
     left: 0;
     /* Align to the start of the relative box */
 }
@@ -31,10 +31,10 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-    width: 30px;
-    height: 3px;
+    width: 1.875rem;
+    height: 0.1875rem;
     background-color: var(--color-black);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     position: absolute;
     transition-property: transform, opacity;
     transition-duration: 0.15s;
@@ -43,13 +43,13 @@
 }
 
 .hamburger-inner::before {
-    top: -10px;
+    top: -0.625rem;
     left: 0;
     /* Ensure alignment */
 }
 
 .hamburger-inner::after {
-    top: 10px;
+    top: 0.625rem;
     left: 0;
     /* Ensure alignment */
 }
@@ -64,7 +64,7 @@
 /* =========================
    TABLET & MOBILE (< 1024px)
    ========================= */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
 
     /* Layout Adjustments */
     .header-container {
@@ -314,7 +314,7 @@
     }
 
     .comparison-table {
-        min-width: 600px;
+        min-width: 37.5rem;
         /* Force scroll on smaller screens */
     }
 
@@ -394,7 +394,7 @@
 /* =========================
    MOBILE (< 768px)
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .header-container {
         padding: 0.75rem 1.5rem;
         /* Tighter padding for mobile */
@@ -407,9 +407,9 @@
 
     /* Optional: Adjust button size or hide text on very small screens */
     .header-actions .btn {
-        padding: 10px 16px;
-        font-size: 14px;
-        height: 36px;
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+        height: 2.25rem;
     }
 
     .search-icon {
@@ -470,7 +470,7 @@
     /* Full width buttons on mobile? or kept intrinsic */
     .banner-content .btn-primary {
         width: 100%;
-        max-width: 300px;
+        max-width: 18.75rem;
         /* Max width for aesthetics */
     }
 

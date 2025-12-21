@@ -1,34 +1,43 @@
 <div class="product-container">
     <div class="product-gallery">
         <div class="product-preview">
-            <img src="../assets/images/preview_original.png" alt="Product Image" class="product-img">
+            <img src="../assets/images/preview_original.png" alt="Product Image" class="product-img"
+                fetchpriority="high" width="500" height="500" decoding="async">
             <div class="product-nav">
                 <button class="icon-button left-arrow-button" aria-label="Previous Image">
-                    <img src="../assets/images/icons/slider_arrow_left.svg" alt="Left Arrow">
+                    <img src="../assets/images/icons/slider_arrow_left.svg" alt="Left Arrow" width="24" height="24">
                 </button>
                 <div class="flex slider-pagination">
-                    <img src="../assets/images/icons/slider_dot_filled.svg" alt="Active Dot">
-                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
-                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
-                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot">
+                    <img src="../assets/images/icons/slider_dot_filled.svg" alt="Active Dot" width="8" height="8">
+                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot" width="8" height="8">
+                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot" width="8" height="8">
+                    <img src="../assets/images/icons/slider_dot_empty.svg" alt="Empty Dot" width="8" height="8">
                 </div>
                 <button class="icon-button right-arrow-button" aria-label="Next Image">
-                    <img src="../assets/images/icons/slider_arrow_right.svg" alt="Right Arrow">
+                    <img src="../assets/images/icons/slider_arrow_right.svg" alt="Right Arrow" width="24" height="24">
                 </button>
             </div>
         </div>
         <div class="product-thumbnails">
             <div class="flex flex-space-between">
-                <img src="../assets/images/preview_1.png" alt="Preview 1" class="preview-img">
-                <img src="../assets/images/preview_2.png" alt="Preview 2" class="preview-img">
-                <img src="../assets/images/preview_3.png" alt="Preview 3" class="preview-img">
-                <img src="../assets/images/preview_4.png" alt="Preview 4" class="preview-img">
+                <img src="../assets/images/preview_1.png" alt="Preview 1" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_2.png" alt="Preview 2" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_3.png" alt="Preview 3" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_4.png" alt="Preview 4" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
             </div>
             <div class="flex flex-space-between">
-                <img src="../assets/images/preview_1.png" alt="Preview 1" class="preview-img">
-                <img src="../assets/images/preview_2.png" alt="Preview 2" class="preview-img">
-                <img src="../assets/images/preview_3.png" alt="Preview 3" class="preview-img">
-                <img src="../assets/images/preview_4.png" alt="Preview 4" class="preview-img">
+                <img src="../assets/images/preview_1.png" alt="Preview 1" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_2.png" alt="Preview 2" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_3.png" alt="Preview 3" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
+                <img src="../assets/images/preview_4.png" alt="Preview 4" class="preview-img" loading="lazy" width="80"
+                    height="80" decoding="async">
             </div>
         </div>
     </div>
@@ -75,11 +84,13 @@
                             <div class="fragrance-container radio-secondary">
                                 <div class="original best-seller-img">
                                     <div class="flex flex-center gap-6">
-                                        <input type="radio" id="frag-single-original" name="fragrance_single" value="original" checked>
+                                        <input type="radio" id="frag-single-original" name="fragrance_single"
+                                            value="original" checked>
                                         <label for="frag-single-original" class="label">Original</label>
                                     </div>
                                     <div class="product-img">
-                                        <img src="../assets/images/product_original.png" alt="Original Fragrance">
+                                        <img src="../assets/images/product_original.png" alt="Original Fragrance"
+                                            loading="lazy" width="60" height="60" decoding="async">
                                     </div>
                                     <div class="best-seller">BEST-SELLER</div>
                                 </div>
@@ -89,7 +100,8 @@
                                         <label for="frag-single-lily" class="label">Lily</label>
                                     </div>
                                     <div class="product-img">
-                                        <img src="../assets/images/product_lily.png" alt="Lily Fragrance">
+                                        <img src="../assets/images/product_lily.png" alt="Lily Fragrance" loading="lazy"
+                                            width="60" height="60" decoding="async">
                                     </div>
                                 </div>
                                 <div class="rose">
@@ -98,7 +110,8 @@
                                         <label for="frag-single-rose" class="label">Rose</label>
                                     </div>
                                     <div class="product-img">
-                                        <img src="../assets/images/product_rose.png" alt="Rose Fragrance">
+                                        <img src="../assets/images/product_rose.png" alt="Rose Fragrance" loading="lazy"
+                                            width="60" height="60" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +176,8 @@
                         <div class="fragrance-container">
                             <div class="original best-seller-img">
                                 <div class="flex flex-center gap-6">
-                                    <input type="radio" id="frag-double-1-original" name="fragrance_double_1" value="original" checked>
+                                    <input type="radio" id="frag-double-1-original" name="fragrance_double_1"
+                                        value="original" checked>
                                     <label for="frag-double-1-original" class="label">Original</label>
                                 </div>
                                 <div class="product-img">
@@ -197,7 +211,8 @@
                         <div class="fragrance-container">
                             <div class="original best-seller-img">
                                 <div class="flex flex-center gap-6">
-                                    <input type="radio" id="frag-double-2-original" name="fragrance_double_2" value="original" checked>
+                                    <input type="radio" id="frag-double-2-original" name="fragrance_double_2"
+                                        value="original" checked>
                                     <label for="frag-double-2-original" class="label">Original</label>
                                 </div>
                                 <div class="product-img">

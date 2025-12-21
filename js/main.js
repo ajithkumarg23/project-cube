@@ -3,12 +3,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('App Initializing...');
 
-    // Load all partials
-    await loadPartial('partials/header.html', 'header-container');
-    await loadPartial('partials/product.html', 'product-container');
-    await loadPartial('partials/stats.html', 'stats-container');
-    await loadPartial('partials/table.html', 'table-container');
-    await loadPartial('partials/footer.html', 'footer-container');
+    // Load all partials in parallel
+    const partials = [
+        { url: 'partials/header.html', targetId: 'header-container' },
+        { url: 'partials/product.html', targetId: 'product-container' },
+        { url: 'partials/stats.html', targetId: 'stats-container' },
+        { url: 'partials/table.html', targetId: 'table-container' },
+        { url: 'partials/footer.html', targetId: 'footer-container' }
+    ];
+
+    await Promise.all(partials.map(p => loadPartial(p.url, p.targetId)));
 
     console.log('All Partials Loaded');
 
