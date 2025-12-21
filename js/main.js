@@ -12,11 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     await Promise.all(partials.map(p => loadPartial(p.url, p.targetId)));
 
-    // Initialize Modules (after partials are in DOM)
-    // We start them manually since we don't have a build system to bundle them
-    // or we dispatch a custom event that individual files listen to.
-
-    // Dispatch event for other scripts to know DOM is ready
     const event = new Event('partialsLoaded');
     document.dispatchEvent(event);
 });

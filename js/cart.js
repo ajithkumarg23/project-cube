@@ -1,7 +1,7 @@
 /**
  * Cart Logic
  * Handles the "Add to Cart" button click and generates the dynamic URL.
- */
+*/
 
 (function () {
     function initCart() {
@@ -42,15 +42,10 @@
         initCart();
     }
 
-    // Watch for dynamic content injection (since partials load asynchronously)
     const observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
             if (mutation.addedNodes.length) {
-                // Check if add-to-cart button was added or relevant section
                 if (document.getElementById('add-to-cart')) {
-                    // We need to ensure we don't attach multiple listeners if initCart is called multiple times.
-                    // A simple way is to check if it's already attached or just re-run safe logic.
-                    // Better: check if we haven't initialized it yet.
                     const btn = document.getElementById('add-to-cart');
                     if (!btn.dataset.cartInitialized) {
                         initCart();

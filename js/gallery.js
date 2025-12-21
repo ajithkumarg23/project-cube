@@ -1,7 +1,6 @@
 (function () {
     function initGallery() {
         const gallery = document.querySelector('.product-gallery');
-        // Check if gallery exists and hasn't been initialized yet
         if (!gallery || gallery.dataset.galleryInitialized === 'true') return;
 
         const mainImage = gallery.querySelector('.product-preview .product-img');
@@ -11,18 +10,12 @@
         const initialDots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('img')) : [];
         const thumbnails = gallery.querySelectorAll('.product-thumbnails .preview-img');
 
-        // Ensure required elements are present
         if (!mainImage || !leftArrow || !rightArrow || initialDots.length === 0) return;
 
-        // Mark as initialized
         gallery.dataset.galleryInitialized = 'true';
 
-        // Store the source URLs for active (filled) and inactive (empty) dots
-        // Assuming the first dot is the active one initially
         const activeDotSrc = initialDots[0].src;
         const inactiveDotSrc = initialDots[1] ? initialDots[1].src : initialDots[0].src;
-
-        // Collect image sources from thumbnails to use for the gallery
         const images = Array.from(thumbnails).map(img => img.src);
         // Fallback if no thumbnails are present
         if (images.length === 0) images.push(mainImage.src);
@@ -47,34 +40,26 @@
         let currentIndex = 0;
 
         function updateGallery(index) {
-            // Handle circular navigation
             if (index < 0) index = images.length - 1;
             if (index >= images.length) index = 0;
 
             currentIndex = index;
 
-            // Transition: Fade Out -> Change Src -> Fade In
             if (images.length > 0) {
-                // Add fade-out logic
-                // We'll use CSS opacity transition on the image
                 mainImage.style.opacity = '0';
                 mainImage.style.transition = 'opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
 
-                // Wait for fade out
                 setTimeout(() => {
                     mainImage.src = images[currentIndex];
-                    // Trigger fade in
-                    // Use requestAnimationFrame or small timeout to ensure DOM update
                     requestAnimationFrame(() => {
                         mainImage.style.opacity = '1';
                     });
-                }, 200); // Match CSS transition duration
+                }, 200);
             }
 
             // Update Dots
             dots.forEach((dot, i) => {
                 dot.src = (i === currentIndex) ? activeDotSrc : inactiveDotSrc;
-                // Add scale effect to active dot
                 dot.style.transform = (i === currentIndex) ? 'scale(1.2)' : 'scale(1)';
                 dot.style.transition = 'transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
             });

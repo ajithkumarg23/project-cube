@@ -276,13 +276,10 @@
             border: 0.063rem solid var(--color-grey);
         }
 
-        /* Selected State */
         .subscription-option.is-selected {
             border-color: var(--color-grey);
-            /* Or primary color if desired */
         }
 
-        /* Header Section */
         .subscription-header {
             display: flex;
             align-items: center;
@@ -300,7 +297,6 @@
             margin-right: 0.625rem;
         }
 
-        /* Add border to header only when selected (to separate from body) */
         .subscription-option.is-selected .header-content {
             border-bottom: 0.063rem solid var(--divider-color);
             padding-bottom: 0.75rem;
@@ -328,7 +324,6 @@
             text-decoration: line-through;
         }
 
-        /* Body Section */
         .subscription-body {
             padding: 0;
             height: 0;
@@ -738,7 +733,7 @@ td.comparison-align-left {
     color: var(--color-black);
 }
 
-/* Icon styles (check/cross) */
+/* Icon styles */
 .comparison-icon {
     display: inline-block;
     width: 1.6875rem;

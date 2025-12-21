@@ -33,18 +33,13 @@
 
     function animateSubscriptionBody(el, action) {
         if (action === 'open') {
-            // 1. Disable transition to measure exact height immediately
             el.style.transition = 'none';
-            // 1. Set height to auto to measure the exact required height
             el.style.height = 'auto';
             const fullHeight = el.offsetHeight;
 
-            // 2. Reset to 0px to start the animation
             el.style.height = '0px';
-            // Restore transition
             el.style.transition = '';
 
-            // Force reflow
             void el.offsetHeight;
 
             requestAnimationFrame(() => {
@@ -56,9 +51,7 @@
                 el.removeEventListener('transitionend', onEnd);
             });
         } else if (action === 'close') {
-            // Set to current pixel height (offsetHeight includes padding/border)
             el.style.height = `${el.offsetHeight}px`;
-            // Force reflow
             void el.offsetHeight;
 
             requestAnimationFrame(() => {
@@ -76,15 +69,10 @@
         const summaryHeight = summary.offsetHeight;
 
         if (action === 'open') {
-            // Set height to summary height (current collapsed state)
             el.style.height = `${summaryHeight}px`;
-            // Add open attribute to render content
             el.setAttribute('open', '');
-
-            // Calculate full height
             const fullHeight = el.scrollHeight;
 
-            // Wait for next frame to start transition
             requestAnimationFrame(() => {
                 el.style.height = `${fullHeight}px`;
             });
@@ -95,10 +83,9 @@
             }, { once: true });
 
         } else if (action === 'close') {
-            // Set height to current full height (in pixels) to allow transition
             el.style.height = `${el.scrollHeight}px`;
+            void el.offsetHeight;
 
-            // Force reflow/wait for next frame
             requestAnimationFrame(() => {
                 el.style.height = `${summaryHeight}px`;
             });
@@ -125,7 +112,6 @@
                 if (isOpen) {
                     animateAccordion(acc, 'close');
                 } else {
-                    // Close other open accordions (optional, for exclusive behavior)
                     document.querySelectorAll('.accordion-item[open]').forEach(other => {
                         animateAccordion(other, 'close');
                     });

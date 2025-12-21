@@ -1,7 +1,7 @@
 /**
  * Header Logic
  * Handles the hamburger menu toggle and other header interactions.
- */
+*/
 
 document.addEventListener('partialsLoaded', () => {
     initHamburgerMenu();
@@ -17,7 +17,7 @@ function initHamburgerMenu() {
     }
 
     hamburgerBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent immediate closing
+        e.stopPropagation();
         hamburgerBtn.classList.toggle('is-active');
         navMenu.classList.toggle('nav-active');
 

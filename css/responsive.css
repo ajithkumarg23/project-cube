@@ -2,10 +2,9 @@
    RESPONSIVE HEADER STYLES
    ========================= */
 
-/* Hamburger Menu Base Styles (Used for Mobile & Tablet) */
+/* Hamburger Menu */
 .hamburger-menu {
     display: none;
-    /* Hidden on desktop */
     background: none;
     border: none;
     cursor: pointer;
@@ -25,7 +24,6 @@
     top: 50%;
     margin-top: -0.09375rem;
     left: 0;
-    /* Align to the start of the relative box */
 }
 
 .hamburger-inner,
@@ -45,16 +43,13 @@
 .hamburger-inner::before {
     top: -0.625rem;
     left: 0;
-    /* Ensure alignment */
 }
 
 .hamburger-inner::after {
     top: 0.625rem;
     left: 0;
-    /* Ensure alignment */
 }
 
-/* Ensure hamburger color adapts if inside header-container */
 .header-container .hamburger-inner,
 .header-container .hamburger-inner::before,
 .header-container .hamburger-inner::after {
@@ -66,18 +61,14 @@
    ========================= */
 @media (max-width: 64rem) {
 
-    /* Layout Adjustments */
     .header-container {
         padding: 0.75rem 2rem;
-        /* Tablet padding */
     }
 
-    /* Show Hamburger */
     .hamburger-menu {
         display: block;
     }
 
-    /* Transform Desktop Nav to Drawer */
     .desktop-nav {
         position: fixed;
         top: 0;
@@ -116,25 +107,21 @@
     /* Animate Hamburger to X */
     .hamburger-menu.is-active .hamburger-inner {
         transform: rotate(45deg);
-        /* The entire group rotates 45deg */
     }
 
     .hamburger-menu.is-active .hamburger-inner::before {
         top: 0;
         opacity: 0;
-        /* Fade out top line */
     }
 
     .hamburger-menu.is-active .hamburger-inner::after {
         top: 0;
         transform: rotate(-90deg);
-        /* Rotate 90deg relative to 45deg parent = -45deg visual */
     }
 
     /* Banner Adjustments for Tablet */
     .banner {
         height: 40rem;
-        /* Reduced height */
     }
 
     .banner-content {
@@ -150,13 +137,11 @@
 
     .banner-content .keywords .header-stat-item {
         margin-right: 2.5rem;
-        /* Reduced spacing */
         font-size: 1.125rem;
     }
 
     .banner-content .keywords .header-stat-item span {
         font-size: 3rem;
-        /* Smaller numbers */
     }
 
     .medal-icon {
@@ -171,13 +156,10 @@
         align-items: center;
         margin-top: 4rem;
         padding: 0 2rem;
-        gap: 1.5rem;
     }
 
     .product-details {
         display: contents;
-        /* Allows children to participate in flex layout */
-        /* width is ignored when display is contents */
     }
 
     /* Reordering: Title(1) > Rating(2) > Desc(3) > Gallery(4) > Purchase(5) */
@@ -220,34 +202,28 @@
     .product-gallery .product-img {
         width: 100%;
         height: auto;
-        /* Maintain aspect ratio */
     }
 
     .product-gallery .product-thumbnails .preview-img {
         width: calc(25% - 0.5rem);
-        /* Distribute evenly */
         height: auto;
         aspect-ratio: 1/1;
     }
 
-    /* Collection Section Adjustments for Tablet */
     /* Collection Section Adjustments for Tablet */
     .collection-container {
         flex-direction: column;
         padding: 0 2rem;
         margin-top: 4rem;
         gap: 2rem;
-        /* Gap handles spacing between flex items */
     }
 
     .collection-content {
         display: contents;
-        /* UNWRAP: Title and Accordion become direct children of container */
     }
 
     .collection-title {
         order: 1;
-        /* First */
         width: 100%;
         text-align: center;
         margin-bottom: 1rem;
@@ -255,7 +231,6 @@
 
     .collection-image {
         order: 2;
-        /* Second */
         width: 100%;
         display: flex;
         justify-content: center;
@@ -271,7 +246,6 @@
 
     .accordion {
         order: 3;
-        /* Third */
         width: 100%;
     }
 
@@ -293,8 +267,6 @@
         margin: 0;
     }
 
-    /* Redundant styles removed */
-
     /* Table Section Adjustments for Tablet */
     #table-container {
         padding: 0 2rem;
@@ -310,12 +282,10 @@
     .comparison-wrapper {
         width: 100%;
         overflow-x: auto;
-        /* Ensure scroll container */
     }
 
     .comparison-table {
         min-width: 37.5rem;
-        /* Force scroll on smaller screens */
     }
 
     .comparison-cell {
@@ -329,18 +299,15 @@
     }
 
     .footer-container {
-        /* flex-direction: column;  Already column in layout.css, but good to keep if needed */
         gap: 2rem;
     }
 
-    /* Stack the content columns */
     .site-footer .footer-content {
         flex-direction: column;
         gap: 3rem;
         align-items: center;
     }
 
-    /* Reset the 50% width from layout.css */
     .site-footer .footer-content>div {
         max-width: 100%;
         width: 100%;
@@ -351,7 +318,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Center brand and links */
     }
 
     .footer-right {
@@ -363,31 +329,26 @@
         gap: 2rem;
         flex-wrap: wrap;
         justify-content: center;
-        /* Center links on tablet */
     }
 
     .footer-brand {
         text-align: center;
-        /* Center brand */
         margin-bottom: 2rem;
     }
 
     .newsletter-form {
         display: flex;
         flex-direction: row;
-        /* Keep in row as requested */
         gap: 0.5rem;
     }
 
     .newsletter-form input {
         width: auto;
         flex: 1;
-        /* Input takes remaining space */
     }
 
     .newsletter-form .btn {
         width: auto;
-        /* Button fits content */
     }
 }
 
@@ -397,19 +358,31 @@
 @media (max-width: 48rem) {
     .header-container {
         padding: 0.75rem 1.5rem;
-        /* Tighter padding for mobile */
     }
 
     .brand-name {
         font-size: 1.5rem;
-        /* Slightly smaller brand name */
     }
 
-    /* Optional: Adjust button size or hide text on very small screens */
     .header-actions .btn {
         padding: 0.625rem 1rem;
         font-size: 0.875rem;
         height: 2.25rem;
+    }
+
+    /* Global Button Scale Down for Mobile */
+    .btn {
+        padding: 0.625rem 1rem;
+    }
+
+    .btn-lg {
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .btn-md {
+        height: 2.5rem;
+        font-size: 0.875rem;
     }
 
     .search-icon {
@@ -421,28 +394,22 @@
     .banner {
         height: auto;
         padding-bottom: 4rem;
-        /* Bottom padding for content */
         background-position: center top;
-        /* Ensure face/product is visible */
         display: flex;
         align-items: center;
-        /* Vertical center if we want, or rely on padding */
         justify-content: center;
     }
 
     .banner-content {
         position: relative;
-        /* No longer absolute */
         top: auto;
         left: auto;
-        margin-top: 6rem;
-        /* Push down below header */
+        margin-top: 5rem;
         width: 100%;
         padding: 0 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Center align text */
         text-align: center;
     }
 
@@ -455,7 +422,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .banner-content .keywords .header-stat-item {
@@ -467,31 +434,23 @@
         font-size: 2.5rem;
     }
 
-    /* Full width buttons on mobile? or kept intrinsic */
     .banner-content .btn-primary {
-        width: 100%;
         max-width: 18.75rem;
-        /* Max width for aesthetics */
     }
 
     .banner-content .btn-secondary {
         width: auto;
-        /* Keep auto for the medal pill */
-        margin-bottom: 1rem;
+        font-size: 0.75rem;
     }
 
-    /* Product Section Adjustments for Mobile */
     .product-container {
         padding: 0 1.5rem;
         margin-top: 3rem;
     }
 
-    /* Subscription Header - Single Line Adjustment */
     .product-details .product-purchase .subscription-header {
         flex-wrap: nowrap;
-        /* Force single line */
         padding: 0.75rem 0.5rem;
-        /* Tight padding */
     }
 
     .product-details .product-purchase .subscription-header .radio-label {
@@ -506,20 +465,16 @@
         font-size: 0.875rem;
     }
 
-    /* Fragrance Container Adjustments */
     .product-details .product-purchase .subscription-body .fragrance-container {
         justify-content: space-between;
-        /* Space out items */
         gap: 0.5rem;
         flex-wrap: nowrap;
-        /* Don't wrap if we can help it, let them shrink */
     }
 
     .product-details .product-purchase .subscription-body .fragrance-container .original,
     .product-details .product-purchase .subscription-body .fragrance-container .lily,
     .product-details .product-purchase .subscription-body .fragrance-container .rose {
         width: 32%;
-        /* Fit 3 in a row */
         height: auto;
         min-height: 8rem;
         padding: 0.5rem;
@@ -532,23 +487,18 @@
 
     .product-details .product-purchase .subscription-body .included-item-container {
         flex-direction: column;
-        /* Stack 'Every 30 Days' and 'One Time' */
     }
 
-    /* Increased specificity to override layout.css nesting */
     .product-details .product-purchase .subscription-body .included .included-item-monthly,
     .product-details .product-purchase .subscription-body .included .included-item-onetime {
         width: 100%;
-        /* Full width */
         height: auto;
     }
 
-    /* Collection Section Mobile */
     .collection-container {
         padding: 0 1.5rem;
     }
 
-    /* Stats Section Mobile */
     .stats-container {
         padding: 3rem 1.5rem;
         gap: 2rem 1rem;
@@ -579,22 +529,17 @@
 
     .site-footer .footer-links {
         flex-direction: row;
-        /* Switch back to row to allow side-by-side */
         flex-wrap: wrap;
         justify-content: space-around;
-        /* or space-between depending on look */
         align-items: flex-start;
         text-align: left;
-        /* Reset text align for list items */
         gap: 2rem 1rem;
-        /* Row gap 2rem, Column gap 1rem (adjusted) */
     }
 
     .site-footer .footer-links ul {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        /* Default width auto, so they sit next to each other if space allows */
     }
 
     .site-footer .footer-links li {
@@ -603,7 +548,6 @@
 
     .site-footer .footer-links .social-links {
         width: 100%;
-        /* Force social links to new line */
         flex-direction: row !important;
         justify-content: center;
         gap: 1.5rem !important;
@@ -614,4 +558,16 @@
     .site-footer .newsletter-note {
         text-align: center;
     }
+
+    .site-footer {
+        .newsletter-form {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            height: 2.5rem
+        }
+    }
+
 }
