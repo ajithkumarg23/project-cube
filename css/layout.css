@@ -597,12 +597,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
-    padding: 0 64px;
+    margin-top: 4.375rem;
+    padding: 0 4rem;
 }
 
 .comparison {
-    width: 950px;
+    width: 100%;
+    max-width: 59.375rem;
 }
 
 .comparison-header {
@@ -611,15 +612,16 @@
 
 .comparison-divider {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
+    display: block;
 }
 
 .comparison-title {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 2.25rem;
     text-align: center;
-    margin: 40px 0 55px 0;
+    margin: 2.5rem 0 3.4375rem 0;
 }
 
 .comparison-table-wrapper {
@@ -628,98 +630,79 @@
 
 .comparison-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     background: var(--color-white);
 }
 
-.comparison-table th,
-.comparison-table td {
+.comparison-cell {
     text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid var(--table-border);
+    padding: 0.9375rem;
+    border-bottom: 0.0625rem solid var(--table-border);
     vertical-align: middle;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--table-secondary-text);
 }
 
-.comparison-qualities-header {
-    text-align: left !important;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 16px;
-    background: var(--color-white);
-    border-bottom: 1px solid var(--table-border);
-}
-
-.comparison-brand {
+.comparison-cell-head {
     font-weight: 500;
     background: var(--color-white);
+    vertical-align: bottom;
 }
 
-.comparison-brand-gtg {
-    background: var(--table-bg);
-    position: relative;
-    border-bottom: 1px dashed var(--table-border) !important;
+.comparison-align-left {
+    text-align: left;
+    font-weight: 700;
+    color: var(--color-black);
+}
 
-    .comparison-brand-name {
-        font-weight: 300;
-        font-size: 20px;
-        text-align: center;
-        color: var(--color-black);
-    }
+td.comparison-align-left {
+    color: var(--table-secondary-text);
 }
 
 .comparison-brand-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 7px;
+    margin-bottom: 0.4375rem;
 }
 
 .comparison-brand-img img {
-    width: 88px;
-    height: 87px;
+    width: 5.5rem;
+    height: 5.4375rem;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 }
 
 .comparison-brand-name {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
     color: var(--table-secondary-text);
+    display: block;
 }
 
-.comparison-quality {
-    text-align: left !important;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--table-secondary-text);
+/* Highlight GTG column */
+.comparison-highlight {
+    background: var(--table-bg);
+    border-bottom: 0.0625rem dashed var(--table-border);
 }
 
-.comparison-cell-gtg {
-    font-weight: 300;
-    font-size: 16px;
-    text-align: center;
-    background-color: var(--table-bg);
-    border-bottom: 1px dashed var(--table-border) !important;
-    color: var(--table-secondary-text);
-}
-
-.comparison-cell {
-    font-weight: 300;
-    font-size: 16px;
-    text-align: center;
-    color: var(--table-secondary-text);
+.comparison-highlight .comparison-brand-name {
+    font-size: 1.25rem;
+    color: var(--color-black);
 }
 
 /* Icon styles (check/cross) */
 .comparison-icon {
     display: inline-block;
-    width: 27px;
-    height: 27px;
+    width: 1.6875rem;
+    height: 1.6875rem;
     vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 27px;
+    background-size: contain;
 }
 
 .comparison-icon-check {
@@ -734,24 +717,18 @@
     background-image: url('../assets/images/icons/cross.svg');
 }
 
-/* Highlight GTG column */
-.comparison-table td.comparison-cell-gtg,
-.comparison-table th.comparison-brand-gtg {
-    background: var(--table-bg);
+.comparison-highlight-top {
+    border-radius: 0.9375rem 0.9375rem 0 0;
 }
 
-.comparison-cta-wrapper {
+.comparison-highlight-bottom {
+    /* border-radius: 0 0 0.9375rem 0.9375rem; */
+}
+
+.comparison-cta {
     display: flex;
     justify-content: center;
-    margin-top: 82px;
-}
-
-.comparison-cell-gtg-first {
-    border-radius: 15px 15px 0 0;
-}
-
-.comparison-cell-gtg-last {
-    border-radius: 0 0 15px 15px;
+    margin-top: 5.125rem;
 }
 
 /* Comparison Styles Ends */
