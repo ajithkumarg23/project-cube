@@ -747,9 +747,6 @@ td.comparison-align-left {
     }
 
     /* Left section */
-    .footer-left {
-        /* flex: 1; */
-    }
 
     .footer-brand {
         font-weight: 700;
@@ -799,6 +796,9 @@ td.comparison-align-left {
     .footer-right {
         flex: 1;
         max-width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     .newsletter-title {
