@@ -1,77 +1,55 @@
 # GTG Perfumes Landing Page
 
-This is a premium, pixel-perfect, responsive landing page implementation for GTG Perfumes, built with vanilla HTML, CSS, and JavaScript.
+An exclusive, high-performance landing page for GTG Perfumes, featuring a custom variable font design, responsive layouts, and interactive elements.
 
 ## Features
 
--   **Modular Architecture**: Uses a custom vanilla JS loader (`main.js`) to fetch and inject HTML partials, keeping the codebase organized and maintainable.
--   **Responsive Design**: Mobile-first approach with custom breakpoints ensuring layout stability across Mobile, Tablet, and Desktop.
--   **Dynamic Product Options**: 
-    -   Interactive subscription selector (Single vs Double).
-    -   Fragrance selection logic (Original, Lily, Rose).
-    -   Dynamic generation of "Add to Cart" URLs based on 12 different combinations.
-    -   Animated accordion expansions for option details.
--   **Premium Animations**:
-    -   Smooth scroll interactions.
-    -   Micro-interactions on buttons and hover states.
-    -   Custom counter animation for statistics.
-    -   Image gallery with thumbnail navigation.
--   **Performance Optimized**:
-    -   Semantic HTML5.
-    -   No external heavy frameworks.
-    -   `loading="lazy"` and `decoding="async"` for images.
-    -   Defer loading for JavaScript.
-    -   CSS variables for consistent theming.
+- **Responsive Design**: Seamless experience across Mobile, Tablet, and Desktop.
+- **Dynamic Product Gallery**: Custom-built gallery with thumbnail navigation and circular transitions.
+- **Interactive Subscription Options**: "Add to Cart" logic supports 9 different subscription variations (Single/Double + Fragrance combinations).
+- **Animated Counters**: Scroll-triggered percentage counters in the Stats section.
+- **Accordion Collection**: Smooth reveal animations for the collection details.
+- **Performance Optimized**:
+  - `defer` loading for scripts.
+  - `content-visibility` and `will-change` hints for animations (implied).
+  - Optimized image loading strategies.
+  - Partial HTML loading for modularity.
 
-## Project Structure
+## Technology Stack
 
-```
-/project-cube
-├── index.html          # Main entry point (shell)
-├── /partials           # HTML sections (Header, Product, Stats, etc.)
-├── /css                # modular CSS
-│   ├── base.css        # Reset & Variables
-│   ├── layout.css      # Main layout styles
-│   ├── components.css  # Buttons, Inputs, Cards
-│   ├── animations.css  # Keyframes & Transitions
-│   └── responsive.css  # Media queries
-├── /js                 # modular JS
-│   ├── main.js         # Partials loader & entry
-│   ├── product-options.js # Subscription & Cart logic
-│   └── ...
-└── /assets             # Images and Icons
-```
+- **HTML5**: Semantic and accessible structure.
+- **CSS3**: Variables, Flexbox, Grid, and Animations. (No frameworks).
+- **JavaScript (ES6+)**: Vanilla JS for logic, event delegation, and DOM manipulation.
 
-## How to Run
+## Setup Instructions
 
-Since the project uses `fetch()` to load partials, it requires a local server to avoid CORS issues with the `file://` protocol.
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd project-cube
+   ```
 
-### Using VS Code Live Server
-1.  Open the project in VS Code.
-2.  Install the "Live Server" extension.
-3.  Right-click `index.html` and select "Open with Live Server".
+2. **Run locally**:
+   Since the project uses `fetch` to load partials (`header.html`, `footer.html`, etc.), you must run it on a local server to avoid CORS issues.
+   
+   Using Python (if installed):
+   ```bash
+   python -m http.server 8000
+   ```
+   or using VS Code "Live Server" extension.
 
-### Using Python
-```bash
-python -m http.server
-# Open http://localhost:8000
-```
+3. **Open in Browser**:
+   Navigate to `http://localhost:8000`
 
-### Using Node.js (npx)
-```bash
-npx serve .
-# Open http://localhost:3000
-```
+## Implementation Details
 
-## Technical Decisions
+- **Partials**: The `index.html` serves as a shell. `main.js` loads `header`, `product`, `stats`, `table`, and `footer` dynamically.
+- **Add to Cart**: The logic validates the user's selection and generates a URL with parameters corresponding to the chosen subscription type and fragrances.
+    - Example: `http://post.com/addToCart?product_id=rose&product_id_2=lily`
 
--   **No Frameworks**: To ensure maximum performance and zero build-step complexity, we utilized vanilla ES6+ and native DOM APIs.
--   **CSS Variables**: Used extensively for colors, fonts, and spacing to ensure design consistency and easy theming.
--   **REM Units**: All layout and typography use `rem` for accessibility and scalability. `px` is restricted to borders and small details.
--   **Event Delegation**: Used in JavaScript to handle events for dynamically loaded content effectively.
+## Accessibility
 
-## Browser Support
--   Chrome (Latest)
--   Firefox (Latest)
--   Safari (Latest)
--   Edge (Latest)
+- Semantic HTML tags (`nav`, `main`, `section`, `article`, `footer`).
+- `aria-label` attributes for interactive elements (buttons, inputs).
+- `scope` attributes on tables for screen readers.
+- Keyboard navigability for the menu and forms.
