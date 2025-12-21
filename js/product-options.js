@@ -1,4 +1,4 @@
-(function() {
+(function () {
     function updateSubscriptionClasses(isInitial = false) {
         const singleRadio = document.getElementById('single');
         const doubleRadio = document.getElementById('double');
@@ -43,7 +43,7 @@
             el.style.height = '0px';
             // Restore transition
             el.style.transition = '';
-            
+
             // Force reflow
             void el.offsetHeight;
 
@@ -74,16 +74,16 @@
     function animateAccordion(el, action) {
         const summary = el.querySelector('summary');
         const summaryHeight = summary.offsetHeight;
-        
+
         if (action === 'open') {
             // Set height to summary height (current collapsed state)
             el.style.height = `${summaryHeight}px`;
             // Add open attribute to render content
             el.setAttribute('open', '');
-            
+
             // Calculate full height
             const fullHeight = el.scrollHeight;
-            
+
             // Wait for next frame to start transition
             requestAnimationFrame(() => {
                 el.style.height = `${fullHeight}px`;
@@ -97,7 +97,7 @@
         } else if (action === 'close') {
             // Set height to current full height (in pixels) to allow transition
             el.style.height = `${el.scrollHeight}px`;
-            
+
             // Force reflow/wait for next frame
             requestAnimationFrame(() => {
                 el.style.height = `${summaryHeight}px`;
@@ -121,7 +121,7 @@
             summary.addEventListener('click', (e) => {
                 e.preventDefault();
                 const isOpen = acc.hasAttribute('open');
-                
+
                 if (isOpen) {
                     animateAccordion(acc, 'close');
                 } else {
@@ -135,9 +135,13 @@
         });
     }
 
-    // 1. Event Delegation: Listens for changes on the document, catching events from dynamically added elements.
-    document.addEventListener('change', function(e) {
-        if (e.target && e.target.name === 'subscription') {
+    // 1. Event Delegation: Listens for changes on the document
+    document.addEventListener('change', function (e) {
+        if (e.target && (
+            e.target.name === 'subscription' ||
+            e.target.name === 'fragrance_single' ||
+            e.target.name.startsWith('fragrance_double')
+        )) {
             updateSubscriptionClasses();
         }
     });
@@ -154,8 +158,8 @@
     }
 
     // 3. Mutation Observer: Watches for when the product HTML is actually injected into the page.
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.addedNodes.length) {
                 updateSubscriptionClasses(true);
                 initAccordion();

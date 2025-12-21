@@ -1,8 +1,6 @@
 // Main Entry Point
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('App Initializing...');
-
     // Load all partials in parallel
     const partials = [
         { url: 'partials/header.html', targetId: 'header-container' },
@@ -13,8 +11,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     ];
 
     await Promise.all(partials.map(p => loadPartial(p.url, p.targetId)));
-
-    console.log('All Partials Loaded');
 
     // Initialize Modules (after partials are in DOM)
     // We start them manually since we don't have a build system to bundle them

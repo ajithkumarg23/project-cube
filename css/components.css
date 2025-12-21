@@ -78,6 +78,10 @@
     font-size: 1.25rem;
 }
 
+.btn-fullwidth {
+    width: 100%;
+}
+
 .icon-button {
     background: none;
     border: none;
@@ -101,11 +105,13 @@
 /* Radio Button Styles */
 
 .radio-primary {
+
     input[type="radio"] {
         accent-color: var(--color-secondary);
         width: var(--radio-primay-size);
         height: var(--radio-primay-size);
         transition: transform 0.2s var(--ease-out);
+        cursor: pointer;
     }
 
     input[type="radio"]:checked {
@@ -113,8 +119,11 @@
     }
 
     input+label {
-        cursor: pointer;
         transition: color 0.2s var(--ease-out);
+    }
+
+    label {
+        cursor: pointer;
     }
 }
 
@@ -134,7 +143,10 @@
     }
 
     input+label {
-        cursor: pointer;
         transition: color 0.2s var(--ease-out);
+    }
+
+    label {
+        cursor: pointer;
     }
 }

@@ -77,7 +77,6 @@
                 // Add scale effect to active dot
                 dot.style.transform = (i === currentIndex) ? 'scale(1.2)' : 'scale(1)';
                 dot.style.transition = 'transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
-                dot.style.transition = 'transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
             });
 
             // Update Thumbnails Active State

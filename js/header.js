@@ -13,7 +13,6 @@ function initHamburgerMenu() {
     const body = document.body;
 
     if (!hamburgerBtn || !navMenu) {
-        console.warn('Hamburger menu or navigation not found.');
         return;
     }
 
@@ -21,7 +20,7 @@ function initHamburgerMenu() {
         e.stopPropagation(); // Prevent immediate closing
         hamburgerBtn.classList.toggle('is-active');
         navMenu.classList.toggle('nav-active');
-        
+
         // Prevent scrolling when menu is open
         if (navMenu.classList.contains('nav-active')) {
             body.style.overflow = 'hidden';
@@ -33,7 +32,7 @@ function initHamburgerMenu() {
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         const isClickInside = navMenu.contains(e.target) || hamburgerBtn.contains(e.target);
-        
+
         if (!isClickInside && navMenu.classList.contains('nav-active')) {
             hamburgerBtn.classList.remove('is-active');
             navMenu.classList.remove('nav-active');
