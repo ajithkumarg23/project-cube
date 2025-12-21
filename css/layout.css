@@ -45,6 +45,27 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
+    transition: color 0.2s var(--ease-out);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: var(--gradient-text);
+    transition: width 0.3s var(--ease-out);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
 }
 
 .dropdown-icon {
@@ -229,7 +250,15 @@
         .subscription-option {
             border-radius: 0.375rem;
             margin-top: 0.625rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease, transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+            position: relative;
+            background-color: var(--color-white);
+        }
+
+        .subscription-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            z-index: 1;
         }
 
         #subscription-double {
@@ -503,7 +532,12 @@
     border: 0.0625rem solid var(--accordion-border);
     width: 39.125rem;
     overflow: hidden;
-    transition: height 0.4s ease;
+    transition: height 0.4s ease, transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .accordion-header {

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     function initGallery() {
         const gallery = document.querySelector('.product-gallery');
         // Check if gallery exists and hasn't been initialized yet
@@ -48,30 +48,45 @@
 
             currentIndex = index;
 
-            // Update Main Image
-            // Use modulo to map the current index to the available images
+            // Transition: Fade Out -> Change Src -> Fade In
             if (images.length > 0) {
-                mainImage.src = images[currentIndex];
+                // Add fade-out logic
+                // We'll use CSS opacity transition on the image
+                mainImage.style.opacity = '0';
+                mainImage.style.transition = 'opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
+
+                // Wait for fade out
+                setTimeout(() => {
+                    mainImage.src = images[currentIndex];
+                    // Trigger fade in
+                    // Use requestAnimationFrame or small timeout to ensure DOM update
+                    requestAnimationFrame(() => {
+                        mainImage.style.opacity = '1';
+                    });
+                }, 200); // Match CSS transition duration
             }
 
             // Update Dots
             dots.forEach((dot, i) => {
                 dot.src = (i === currentIndex) ? activeDotSrc : inactiveDotSrc;
+                // Add scale effect to active dot
+                dot.style.transform = (i === currentIndex) ? 'scale(1.2)' : 'scale(1)';
+                dot.style.transition = 'transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
             });
         }
 
         // Event Listeners for Arrows
-        leftArrow.addEventListener('click', function() {
+        leftArrow.addEventListener('click', function () {
             updateGallery(currentIndex - 1);
         });
 
-        rightArrow.addEventListener('click', function() {
+        rightArrow.addEventListener('click', function () {
             updateGallery(currentIndex + 1);
         });
 
         // Event Listeners for Thumbnails
         thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener('click', function() {
+            thumb.addEventListener('click', function () {
                 updateGallery(index);
             });
         });
@@ -85,8 +100,8 @@
     }
 
     // Watch for dynamic content injection
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.addedNodes.length) {
                 initGallery();
             }
