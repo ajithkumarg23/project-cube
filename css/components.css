@@ -1,6 +1,9 @@
 :root {
     /* Button Border Radius */
     --border-radius: 500px;
+
+    --radio-primay-size: 18px;
+    --radio-secondary-size: 12px;
 }
 
 /* Buttons Style */
@@ -64,9 +67,28 @@
 
 /* Radio Button Styles */
 
-input[type="radio"] {
-  accent-color: var(--color-secondary);
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
+.radio-primary {
+    input[type="radio"] {
+        accent-color: var(--color-secondary);
+        width: var(--radio-primay-size);
+        height: var(--radio-primay-size);
+    }
+
+    input+label {
+        cursor: pointer;
+    }
+}
+
+.radio-secondary {
+    input[type="radio"] {
+        accent-color: var(--color-secondary);
+        width: var(--radio-secondary-size);
+        height: var(--radio-secondary-size);
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    input+label {
+        cursor: pointer;
+    }
 }
